@@ -28,7 +28,7 @@ int main()
         cout << "НЕВЕРНОЕ ЗНАЧЕНИЕ" << endl;
     }
     if (check == false){
-        cout << "Invalid values" << endl;
+        cout << "НЕВЕРНОЕ ЗНАЧЕНИЕ" << endl;
     }
     
     first = a[0];
