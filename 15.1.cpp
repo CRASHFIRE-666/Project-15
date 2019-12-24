@@ -1,38 +1,40 @@
 #include <iostream>
-#include <vector>
+#include <cmath>
 using namespace std;
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    int n;
-    cout<<"Введите N"<<endl;
-    cin>>n;
-    vector<int> a(n);
-    cout<<"Введите массив"<<endl;
-    for (int i=0; i<n; i++)
-    {
-        cin>>a[i];
+    int n, i, space;
+    
+    
+    cin >> n;
+    
+    
+    int* a = new int [n];
+    
+    int* b = new int [n];
+    
+    for(i = 0; i < n; i++){
+        cin >> a[i];
     }
-    vector<int> b(n);
-    cout<<"Введите массив"<<endl;
-    for (int i=0; i<n; i++)
-    {
-        cin>>b[i];
+    cout << endl;
+    for (i = 0; i < n; i++){
+        cin >> b[i];
     }
-    int c;
-    for (int i=0; i<n; i++)
-    {
-        c=a[i];
-        a[i]=b[i];
-        b[i]=c;
+    
+    for (i = 0; i < n; i++){
+        space = a[i];
+        a[i] = b[i];
+        b[i] = space;
     }
-    for (int i=0; i<n; i++)
-    {
-        cout<<a[i]<<endl;
+    
+    for (i = 0; i < n; i++){
+        cout << b[i] << " ";
     }
-    for (int i=0; i<n; i++)
-    {
-        cout<<b[i]<<endl;
+    cout << endl;
+    
+    for (i = 0; i < n; i++){
+        cout << a[i] << " ";
     }
     return 0;
 }
